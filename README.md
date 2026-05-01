@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/logos/png/header_transparent.png" alt="Travel Explorer Logo">
+  <img src="assets/logos/PNG/header_transparent.png" alt="Travel Explorer Logo">
   <br>
 </p>
 The successor to Buenos Aires Explorer: evolving from a regional desktop app to a worldwide web platform with optimized routing and business integration.
