@@ -1,7 +1,7 @@
 # TravelExplorer
 
 <p align="center">
-  <img src="/assets/logos/PNG/header_transparent.png" alt="Travel Explorer Logo">
+  <img src="\assets\logos\Preview_Image\Fundo_Transparente\logo_Preview_Image_Fundo_Transparente.png" alt="Travel Explorer Logo">
 </p>
 
 <p align="center">
