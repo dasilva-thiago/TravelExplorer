@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Explorer</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -29,6 +35,38 @@
             <a href="#" class="btn btn-solid">Registrar</a>
         </div>
     </nav>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-image-wrapper">
+                <img src="assets/logos/Header_Site/Fundo_Transparente/logo_Header_Site_Fundo_Transparente.webp" alt="Ilustração Travel Explorer" class="hero-image">
+            </div>
+
+            <div class="hero-search-content">
+                <h1 class="hero-title">Aonde você quer ir?</h1>
+            </div>
+                
+                <div class="search-tabs" role="tablist">
+                    <button class="tab active" role="tab" aria-selected="true">
+                        <i class="fa-solid fa-house"></i> Pesquisar tudo
+                    </button>
+                    <button class="tab" role="tab" aria-selected="false">
+                        <i class="fa-solid fa-ticket"></i> O que fazer
+                    </button>
+                    <button class="tab" role="tab" aria-selected="false">
+                        <i class="fa-solid fa-utensils"></i> Restaurantes
+                    </button>
+                </div>
+
+                <form class="search-bar" role="search">
+                    <div class="search-input-group">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input type="text" class="input-search" placeholder="Planeje sua viagem!" aria-label="Planeje sua viagem!">
+                    </div>
+                    <button type="submit" class="btn-search">Buscar</button>
+                </form>
+        </div>
+    </section>
 
 </body>
 
