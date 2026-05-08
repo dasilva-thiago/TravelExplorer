@@ -5,6 +5,41 @@
     --hover-gold: #d1a224;
     --offwhite-bg: #fcfcfc;
     --light-gray: #f0f0f0;
+    --muted-text: #7a7a7a;
+
+    --logo-blue-10: rgba(84, 130, 169, 0.10);
+    --logo-blue-18: rgba(84, 130, 169, 0.18);
+    --logo-blue-25: rgba(84, 130, 169, 0.25);
+    --logo-blue-35: rgba(84, 130, 169, 0.35);
+    --logo-blue-64: rgba(84, 130, 169, 0.64);
+
+    --logo-gold-18: rgba(232, 180, 40, 0.18);
+    --logo-gold-45: rgba(232, 180, 40, 0.45);
+
+    --overlay-dark-0: rgba(8, 20, 38, 0.00);
+    --overlay-dark-20: rgba(8, 20, 38, 0.20);
+    --overlay-dark-55: rgba(8, 20, 38, 0.55);
+    --overlay-dark-88: rgba(8, 20, 38, 0.88);
+
+    --white: #ffffff;
+    --white-75: rgba(255, 255, 255, 0.75);
+    --white-88: rgba(255, 255, 255, 0.88);
+
+    --shadow-soft: rgba(0, 0, 0, 0.08);
+    --shadow-text: rgba(0, 0, 0, 0.35);
+    --shadow-text-light: rgba(0, 0, 0, 0.40);
+
+    --indicator-inactive: #c8d4de;
+
+    --radius-sm: 12px;
+    --radius-md: 16px;
+    --radius-lg: 18px;
+    --radius-pill: 999px;
+
+    --carousel-width: 1200px;
+    --carousel-height: 600px;
+    --carousel-arrow-size: 40px;
+    --carousel-arrow-offset: -46px;
 }
 
 *,
@@ -20,6 +55,8 @@ body {
     overflow-x: hidden;
 }
 
+/* Navigation Bar */
+
 .logo {
     width: 400px;
     max-width: 100%;
@@ -29,8 +66,6 @@ body {
     flex-shrink: 0;
 }
 
-/* Navigation Bar */
-
 nav {
     display: flex;
     justify-content: space-between;
@@ -38,7 +73,7 @@ nav {
     padding: 0 50px;
     height: 90px;
     background-color: var(--offwhite-bg);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 4px var(--shadow-soft);
     width: 100%;
     overflow: hidden;
 }
@@ -82,8 +117,8 @@ nav .right-section {
 .btn {
     text-decoration: none;
     padding: 10px 24px;
-    border-radius: 25px;
-    font-weight: bold;
+    border-radius: var(--radius-pill);
+    font-weight: 700;
     font-size: 14px;
     white-space: nowrap;
     transition: all 0.3s ease;
@@ -98,18 +133,19 @@ nav .right-section {
 
 .btn-outline:hover {
     background-color: var(--logo-blue);
-    color: white;
+    color: var(--white);
 }
 
 .btn-solid {
     background-color: var(--logo-gold);
-    color: white;
+    color: var(--white);
     border: 1px solid var(--logo-gold);
 }
 
 .btn-solid:hover {
     background-color: var(--hover-gold);
 }
+
 /* Hero Section */
 
 .hero-section {
@@ -136,7 +172,7 @@ nav .right-section {
 .hero-image {
     max-width: 100%;
     height: auto;
-    border-radius: 16px;
+    border-radius: var(--radius-md);
     object-fit: cover;
 }
 
@@ -196,16 +232,16 @@ nav .right-section {
 .search-bar {
     display: flex;
     align-items: center;
-    background-color: white;
+    background-color: var(--white);
     border: 1px solid wheat;
-    border-radius: 50px;
+    border-radius: var(--radius-pill);
     padding: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px var(--shadow-soft);
     transition: box-shadow 0.3s ease;
 }
 
 .search-bar:focus-within {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 20px var(--logo-blue-64);
     border-color: var(--logo-blue);
 }
 
@@ -254,6 +290,175 @@ nav .right-section {
     background-color: var(--hover-gold);
 }
 
+/* Carousel Section */
+
+.carousel-section {
+    padding: 72px 50px;
+    background-color: var(--offwhite-bg);
+    text-align: center;
+}
+
+.carousel-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--logo-blue);
+    margin-bottom: 8px;
+}
+
+.carousel-section .section-subtitle {
+    font-size: 16px;
+    color: var(--muted-text);
+    margin-bottom: 36px;
+}
+
+.carousel-wrapper {
+    width: var(--carousel-width);
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Força o Bootstrap a respeitar a largura do wrapper */
+.carousel-wrapper .carousel,
+.carousel-wrapper .carousel-inner,
+.carousel-wrapper .carousel-item {
+    width: var(--carousel-width);
+    max-width: 100%;
+}
+
+#travelCarousel {
+    width: var(--carousel-width);
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+#travelCarousel .carousel-inner {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.project-card {
+    position: relative;
+    width: 100%;
+    height: var(--carousel-height);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    display: block;
+}
+
+.project-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.7s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.04);
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(170deg,
+            var(--overlay-dark-88) 0%,
+            var(--overlay-dark-55) 55%,
+            var(--overlay-dark-20) 100%);
+    z-index: 1;
+    border-radius: var(--radius-lg);
+}
+
+.project-info {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 40px 36px;
+    gap: 10px;
+    text-align: left;
+}
+
+.project-tag {
+    display: inline-block;
+    background-color: var(--logo-gold-18);
+    color: var(--logo-gold);
+    border: 1px solid var(--logo-gold-45);
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 5px 13px;
+    border-radius: var(--radius-pill);
+    width: fit-content;
+    backdrop-filter: blur(6px);
+}
+
+.project-info h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    margin: 0;
+    line-height: 1.35;
+    text-shadow: 0 2px 12px var(--shadow-text);
+}
+
+.project-info h3::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: var(--logo-gold);
+    border-radius: 2px;
+    margin-bottom: 8px;
+}
+
+.project-info p {
+    font-size: 13px;
+    color: var(--white-75);
+    margin: 0;
+    line-height: 1.65;
+    text-shadow: 0 1px 8px var(--shadow-text-light);
+}
+
+#travelCarousel .carousel-indicators {
+    position: relative;
+    bottom: auto;
+    margin: 16px 0 0 0;
+    justify-content: center;
+    gap: 0;
+}
+
+#travelCarousel .carousel-indicators button {
+    width: 8px;
+    height: 8px;
+    border-radius: var(--radius-pill);
+    background-color: var(--indicator-inactive);
+    border: none;
+    opacity: 1;
+    transition: all 0.3s ease;
+    margin: 0 4px;
+}
+
+#travelCarousel .carousel-indicators button.active {
+    background-color: var(--logo-blue);
+    width: 26px;
+}
+
 /* Destinations Section */
 
 .destinations-section {
@@ -266,7 +471,7 @@ nav .right-section {
     margin: 0 auto;
 }
 
-.section-subtitle {
+.destinations-section .section-subtitle {
     text-align: center;
     font-size: 20px;
     color: var(--logo-blue);
@@ -276,25 +481,24 @@ nav .right-section {
     font-weight: 500;
 }
 
-/* Destinations Grid */
 .destinations-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
 }
 
-/* Destination Card */
 .destination-card {
     background-color: var(--light-gray);
-    border-radius: 16px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 15px var(--logo-blue-10);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid var(--light-gray);
 }
+
 .destination-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 25px var(--logo-blue-10);
 }
 
 .card-image {
@@ -321,17 +525,16 @@ nav .right-section {
 .card-content h3 {
     margin: 0 0 12px;
     font-size: 22px;
-    color: black;
+    color: var(--muted-text);
 }
 
 .card-content p {
     font-size: 14px;
-    color: var(--text-color);
+    color: var(--muted-text);
     margin-bottom: 24px;
     line-height: 1.5;
 }
 
-/* card buttons/links */
 .btn-card {
     display: inline-block;
     text-decoration: none;
@@ -357,7 +560,8 @@ nav .right-section {
     width: 100%;
 }
 
-/* Mobile Responsiveness */
+/* Media Queries */
+
 @media (max-width: 1100px) {
     nav {
         padding: 0 30px;
@@ -387,6 +591,10 @@ nav .right-section {
     .destinations-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .carousel-section {
+        padding: 60px 30px;
+    }
 }
 
 @media (max-width: 992px) {
@@ -395,11 +603,13 @@ nav .right-section {
         text-align: center;
         gap: 40px;
     }
+
     .search-tabs {
         justify-content: center;
     }
+
     .hero-image-wrapper {
-        order: -1; 
+        order: -1;
     }
 }
 
@@ -433,26 +643,55 @@ nav .right-section {
     .hero-section {
         padding: 40px 20px;
     }
+
     .hero-title {
         font-size: 32px;
     }
+
     .search-tabs {
         justify-content: flex-start;
         padding-bottom: 5px;
     }
+
     .search-bar {
         flex-direction: column;
         border-radius: 24px;
         padding: 16px;
         gap: 16px;
     }
+
     .search-input-group {
         padding: 0;
         width: 100%;
     }
+
     .btn-search {
         width: 100%;
         border-radius: 24px;
+    }
+
+    .carousel-section {
+        padding: 48px 16px;
+    }
+
+    .carousel-wrapper,
+    .carousel-wrapper .carousel,
+    .carousel-wrapper .carousel-inner,
+    .carousel-wrapper .carousel-item {
+        width: 100%;
+    }
+
+    .project-card {
+        height: 420px;
+        border-radius: var(--radius-md);
+    }
+
+    .project-info {
+        padding: 28px 24px;
+    }
+
+    .project-info h3 {
+        font-size: 20px;
     }
 }
 
@@ -460,12 +699,12 @@ nav .right-section {
     .destinations-section {
         padding: 60px 20px;
     }
-    
+
     .destinations-grid {
         grid-template-columns: 1fr;
     }
-    
-    .section-subtitle {
+
+    .destinations-section .section-subtitle {
         font-size: 18px;
     }
 }
@@ -491,5 +730,32 @@ nav .right-section {
 
     .btn-outline {
         display: none;
+    }
+
+    .carousel-section h2 {
+        font-size: 24px;
+    }
+
+    .project-card {
+        height: 360px;
+        border-radius: var(--radius-sm);
+    }
+
+    .project-info {
+        padding: 24px 20px;
+        gap: 8px;
+        justify-content: flex-end;
+        padding-bottom: 30px;
+    }
+
+    .project-info h3 {
+        font-size: 18px;
+    }
+
+    .project-card::before {
+        background: linear-gradient(180deg,
+                var(--overlay-dark-20) 0%,
+                var(--overlay-dark-88) 60%,
+                var(--overlay-dark-88) 100%);
     }
 }
