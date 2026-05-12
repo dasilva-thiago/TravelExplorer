@@ -90,6 +90,12 @@
     margin-top: -90px;
 }
 
+.hero-tagline-explore {
+    color: var(--logo-blue);
+    font-weight: 700;
+    text-shadow: 0 1px 4px var(--overlay-dark-25);
+}
+
 .hero-search-section {
     background-color: var(--offwhite-bg);
     padding: 48px 50px;

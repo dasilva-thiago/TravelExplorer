@@ -53,4 +53,7 @@
     /* Dimensões - Layout */
     --carousel-width: 1200px;
     --carousel-height: 600px;
+
+    /* Offset para o logotipo na navegação */
+    --nav-logo-offset: -45px;
 }
