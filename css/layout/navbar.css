@@ -1,10 +1,16 @@
+.logo-link {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
 .logo {
-    width: 200px;
+    width: 300px;
     max-width: 100%;
     height: auto;
     margin-top: 12px;
     object-fit: contain;
-    flex-shrink: 0;
     margin-left: var(--nav-logo-offset);
 }
 
@@ -156,8 +162,9 @@ nav.nav--search-active .nav-search {
         height: 70px;
     }
     .logo {
-        width: 200px;
+        width: 250px;
         margin-top: 6px;
+        padding-left: 10px;
     }
     .nav-links {
         display: none;
@@ -176,7 +183,7 @@ nav.nav--search-active .nav-search {
         height: 64px;
     }
     .logo {
-        width: 200px;
+        width: 250px;
         padding-left: 22px;
     }
     nav .right-section {
@@ -186,6 +193,7 @@ nav.nav--search-active .nav-search {
 
 @media (max-width: 360px) {
     .logo {
-        width: 150px;
+        width: 225px;
+        padding-left: 25px;
     }
 }
