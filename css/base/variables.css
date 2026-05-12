@@ -1,0 +1,56 @@
+:root {
+    /* Cores Principais Sólidas */
+    --logo-blue: #5482A9;
+    --logo-gold: #E8B428;
+    --text-color: #4a4a4a;
+    --hover-gold: #d1a224;
+    --offwhite-bg: #fcfcfc;
+    --light-gray: #f0f0f0;
+    --muted-text: #7a7a7a;
+    --dark-navy: #081426;
+    --white: #ffffff;
+    --wheat: wheat;
+    --indicator-inactive: #c8d4de;
+
+    /* Variações de Transparência - Azul */
+    --logo-blue-10: rgba(84, 130, 169, 0.10);
+    --logo-blue-18: rgba(84, 130, 169, 0.18);
+    --logo-blue-25: rgba(84, 130, 169, 0.25);
+    --logo-blue-35: rgba(84, 130, 169, 0.35);
+    --logo-blue-64: rgba(84, 130, 169, 0.64);
+
+    /* Variações de Transparência - Dourado */
+    --logo-gold-18: rgba(232, 180, 40, 0.18);
+    --logo-gold-30: rgba(232, 180, 40, 0.30);
+    --logo-gold-45: rgba(232, 180, 40, 0.45);
+
+    /* Variações de Transparência - Escuros */
+    --overlay-dark-0:  rgba(8, 20, 38, 0.00);
+    --overlay-dark-20: rgba(8, 20, 38, 0.20);
+    --overlay-dark-25: rgba(8, 20, 38, 0.25);
+    --overlay-dark-55: rgba(8, 20, 38, 0.55);
+    --overlay-dark-88: rgba(8, 20, 38, 0.88);
+
+    /* Variações de Transparência - Branco */
+    --white-05: rgba(255, 255, 255, 0.05);
+    --white-10: rgba(255, 255, 255, 0.10);
+    --white-50: rgba(255, 255, 255, 0.50);
+    --white-72: rgba(255, 255, 255, 0.72);
+    --white-75: rgba(255, 255, 255, 0.75);
+    --white-88: rgba(255, 255, 255, 0.88);
+
+    /* Sombras */
+    --shadow-soft: rgba(0, 0, 0, 0.08);
+    --shadow-text: rgba(0, 0, 0, 0.35);
+    --shadow-text-light: rgba(0, 0, 0, 0.40);
+
+    /* Dimensões - Border Radius */
+    --radius-sm: 12px;
+    --radius-md: 16px;
+    --radius-lg: 18px;
+    --radius-pill: 999px;
+
+    /* Dimensões - Layout */
+    --carousel-width: 1200px;
+    --carousel-height: 600px;
+}
