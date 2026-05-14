@@ -25,24 +25,18 @@
     position: relative;
 }
 
-.carousel-wrapper .carousel,
-.carousel-wrapper .carousel-inner,
-.carousel-wrapper .carousel-item {
-    width: var(--carousel-width);
-    max-width: 100%;
-}
-
 #travelCarousel {
-    width: var(--carousel-width);
-    max-width: 100%;
-    margin: 0 auto;
+    width: 100%;
     border-radius: var(--radius-lg);
     overflow: hidden;
 }
 
-#travelCarousel .carousel-inner {
+#travelCarousel .swiper-wrapper {
     border-radius: var(--radius-lg);
-    overflow: hidden;
+}
+
+#travelCarousel .swiper-slide {
+    width: 100%;
 }
 
 .project-card {
@@ -141,26 +135,24 @@
     text-shadow: 0 1px 8px var(--shadow-text-light);
 }
 
-#travelCarousel .carousel-indicators {
-    position: relative;
-    bottom: auto;
-    margin: 16px 0 0 0;
+.carousel-indicators {
+    display: flex;
     justify-content: center;
+    margin: 16px 0 0 0;
     gap: 0;
 }
 
-#travelCarousel .carousel-indicators button {
+.carousel-indicators .swiper-pagination-bullet {
     width: 8px;
     height: 8px;
     border-radius: var(--radius-pill);
     background-color: var(--indicator-inactive);
-    border: none;
     opacity: 1;
     transition: all 0.3s ease;
     margin: 0 4px;
 }
 
-#travelCarousel .carousel-indicators button.active {
+.carousel-indicators .swiper-pagination-bullet-active {
     background-color: var(--logo-blue);
     width: 26px;
 }
@@ -191,10 +183,7 @@
         font-size: 14px;
         margin-bottom: 24px;
     }
-    .carousel-wrapper,
-    .carousel-wrapper .carousel,
-    .carousel-wrapper .carousel-inner,
-    .carousel-wrapper .carousel-item {
+    .carousel-wrapper {
         width: 100%;
     }
     .project-card {

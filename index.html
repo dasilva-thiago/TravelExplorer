@@ -11,14 +11,10 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
 
-    <!-- Clouds Background -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.clouds.min.js"></script>
 
@@ -51,7 +47,6 @@
             <a href="login.html" class="btn btn-outline">Login</a>
             <a href="login.html" class="btn btn-solid">Registrar</a>
         </div>
-
     </nav>
 
     <section class="hero-banner">
@@ -91,8 +86,6 @@
             </div>
             <button type="submit" class="btn-search">Buscar</button>
         </form>
-
-        </div>
     </section>
 
     <section id="carousel" class="carousel-section">
@@ -100,11 +93,11 @@
         <p class="section-subtitle">Aqui você encontra as melhores opções para sua próxima aventura</p>
 
         <div class="carousel-wrapper">
-            <div id="travelCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div id="travelCarousel" class="swiper">
 
-                <div class="carousel-inner">
+                <div class="swiper-wrapper">
 
-                    <div class="carousel-item active">
+                    <div class="swiper-slide">
                         <div class="project-card">
                             <div class="project-info">
                                 <span class="project-tag">Roteiros</span>
@@ -112,12 +105,12 @@
                                 <p>Você planeja seu itinerário otimizado</p>
                             </div>
                             <div class="project-image">
-                                <img src="assets/img/carousel/roteiro.webp" alt="Project One Screenshot">
+                                <img src="assets/img/carousel/roteiro.webp" alt="Guias de viagem e câmera fotográfica">
                             </div>
                         </div>
                     </div>
 
-                    <div class="carousel-item">
+                    <div class="swiper-slide">
                         <div class="project-card">
                             <div class="project-info">
                                 <span class="project-tag">Restaurantes</span>
@@ -125,12 +118,12 @@
                                 <p>Explore os melhores restaurantes do destino</p>
                             </div>
                             <div class="project-image">
-                                <img src="assets/img/carousel/restaurante.webp" alt="Project Two Screenshot">
+                                <img src="assets/img/carousel/restaurante.webp" alt="Restaurante ao ar livre">
                             </div>
                         </div>
                     </div>
 
-                    <div class="carousel-item">
+                    <div class="swiper-slide">
                         <div class="project-card">
                             <div class="project-info">
                                 <span class="project-tag">Experiências</span>
@@ -138,20 +131,17 @@
                                 <p>Atividades e atrações para todos os estilos</p>
                             </div>
                             <div class="project-image">
-                                <img src="assets/img/carousel/exploradores.webp" alt="Project Three Screenshot">
+                                <img src="assets/img/carousel/exploradores.webp" alt="Grupo de exploradores na montanha">
                             </div>
                         </div>
                     </div>
 
-                </div><!-- /carousel-inner -->
+                </div><!-- /swiper-wrapper -->
 
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#travelCarousel" data-bs-slide-to="0" class="active"></button>
-                    <button type="button" data-bs-target="#travelCarousel" data-bs-slide-to="1"></button>
-                    <button type="button" data-bs-target="#travelCarousel" data-bs-slide-to="2"></button>
-                </div>
+            </div><!-- /swiper -->
 
-            </div><!-- /carousel -->
+            <div class="carousel-indicators swiper-pagination"></div>
+
         </div><!-- /carousel-wrapper -->
     </section>
 
@@ -163,7 +153,7 @@
             <div class="destinations-grid">
                 <article class="destination-card">
                     <div class="card-image">
-                        <img src="assets/img/buenos-aires.webp" alt="Obelisco em Buenos Aires, Argentina">
+                        <img src="assets/img/buenos-aires.webp" alt="Obelisco em Buenos Aires, Argentina" loading="lazy">
                     </div>
                     <div class="card-content">
                         <h3>Buenos Aires</h3>
@@ -174,7 +164,7 @@
 
                 <article class="destination-card">
                     <div class="card-image">
-                        <img src="assets/img/santiago.webp" alt="Vista da Cordilheira em Santiago, Chile">
+                        <img src="assets/img/santiago.webp" alt="Vista da Cordilheira em Santiago, Chile" loading="lazy">
                     </div>
                     <div class="card-content">
                         <h3>Santiago</h3>
@@ -185,7 +175,7 @@
 
                 <article class="destination-card">
                     <div class="card-image">
-                        <img src="assets/img/lima.webp" alt="Costa Verde em Lima, Peru">
+                        <img src="assets/img/lima.webp" alt="Costa Verde em Lima, Peru" loading="lazy">
                     </div>
                     <div class="card-content">
                         <h3>Lima</h3>
@@ -196,7 +186,7 @@
 
                 <article class="destination-card">
                     <div class="card-image">
-                        <img src="assets/img/paris.webp" alt="Torre Eiffel em Paris, França">
+                        <img src="assets/img/paris.webp" alt="Torre Eiffel em Paris, França" loading="lazy">
                     </div>
                     <div class="card-content">
                         <h3>Paris</h3>
@@ -246,7 +236,7 @@
         <div class="footer-bottom">
             <p>&copy; 2026 Travel Explorer. Todos os direitos reservados.</p>
 
-            <img src="assets\logos\Text_Only\Footer_Mono\Fundo_Transparente\logo_Footer_Mono_Fundo_Transparente.webp"
+            <img src="assets/logos/Text_Only/Footer_Mono/Fundo_Transparente/logo_Footer_Mono_Fundo_Transparente.webp"
                 alt="Travel Explorer" class="footer-bottom-logo">
 
             <div class="footer-legal">
@@ -257,10 +247,8 @@
     </footer>
 
     <script src="js/clouds.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="js/navbar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="js/main.js"></script>
 
 </body>
 
