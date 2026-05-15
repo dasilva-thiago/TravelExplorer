@@ -12,6 +12,12 @@
     --wheat: wheat;
     --indicator-inactive: #c8d4de;
 
+    /* Cores Semânticas & Senha */
+    --status-error: #e63946;
+    --status-warning: #E8B428;
+    --status-success: #2a9d8f;
+    --status-inactive: #e0e0e0;
+
     /* Variações de Transparência - Azul */
     --logo-blue-10: rgba(84, 130, 169, 0.10);
     --logo-blue-18: rgba(84, 130, 169, 0.18);
@@ -39,6 +45,12 @@
     --white-75: rgba(255, 255, 255, 0.75);
     --white-88: rgba(255, 255, 255, 0.88);
 
+    /* cores de superfícies */
+    --surface-card: #ffffff;
+    --input-bg: #f8f9fa;
+    --input-border: #e2e8f0;
+    --input-focus-ring: rgba(84, 130, 169, 0.15);
+
     /* Sombras */
     --shadow-soft: rgba(0, 0, 0, 0.08);
     --shadow-text: rgba(0, 0, 0, 0.35);
@@ -56,4 +68,8 @@
 
     /* Offset para o logotipo na navegação */
     --nav-logo-offset: -50px;
+
+    /* Animações (Easings estilo Stripe/Linear) */
+    --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);
 }

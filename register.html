@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Travel Explorer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div class="register-layout">
+
+        <section class="register-visual">
+            <div class="swiper register-carousel">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <div class="register-slide">
+                            <div class="slide-overlay"></div>
+                            <img src="assets/img/buenos-aires.webp" alt="Arquitetura clássica">
+                            <div class="slide-content">
+                                <h2 class="slide-quote">"Sinta a elegância europeia e viva a intensidade de uma cultura
+                                    pulsante."</h2>
+                                <p class="slide-author">Explore Novos Destinos</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="register-slide">
+                            <div class="slide-overlay"></div>
+                            <img src="assets/img/carousel/roteiro.webp" alt="Ruas históricas e tranquilas">
+                            <div class="slide-content">
+                                <h2 class="slide-quote">"Descubra o charme histórico e a tranquilidade de caminhos
+                                    seculares."</h2>
+                                <p class="slide-author">Roteiros Inesquecíveis</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="register-slide">
+                            <div class="slide-overlay"></div>
+                            <img src="assets/img/carousel/restaurante.webp" alt="Gastronomia local">
+                            <div class="slide-content">
+                                <h2 class="slide-quote">"Saboreie experiências autênticas, das tradicionais carnes às
+                                    receitas icônicas."</h2>
+                                <p class="slide-author">Experiências Gastronômicas</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <main class="register-form-container">
+            <div class="form-wrapper">
+
+                <header class="brand-header animate-in delay-1">
+                        <img src="assets/logos/Text_Only/Comercial_HQ/Fundo_Transparente/logo_Comercial_HQ_Fundo_Transparente.webp"
+                            alt="Travel Explorer logo">
+                    <h1>Comece sua jornada</h1>
+                    <p>Crie sua conta e organize suas viagens em um só lugar.</p>
+                </header>
+
+                <form id="registerForm" class="register-form" autocomplete="off">
+
+                    <div class="form-row animate-in delay-2">
+                        <div class="floating-group">
+                            <input type="text" id="firstName" class="floating-input" placeholder=" " required>
+                            <label for="firstName" class="floating-label">Nome</label>
+                        </div>
+                        <div class="floating-group">
+                            <input type="text" id="lastName" class="floating-input" placeholder=" " required>
+                            <label for="lastName" class="floating-label">Sobrenome</label>
+                        </div>
+                    </div>
+
+                    <div class="floating-group animate-in delay-3">
+                        <input type="email" id="email" class="floating-input" placeholder=" " required>
+                        <label for="email" class="floating-label">E-mail corporativo ou pessoal</label>
+                    </div>
+
+                    <div class="floating-group animate-in delay-4">
+                        <input type="password" id="password" class="floating-input" placeholder=" " required>
+                        <label for="password" class="floating-label">Crie uma senha</label>
+                        <button type="button" class="password-toggle" id="togglePassword" aria-label="Mostrar senha">
+                            <i class="fa-regular fa-eye"></i>
+                        </button>
+                    </div>
+
+                    <div class="password-strength animate-in delay-4" id="strengthContainer">
+                        <div class="strength-bars">
+                            <div class="strength-bar" id="bar-1"></div>
+                            <div class="strength-bar" id="bar-2"></div>
+                            <div class="strength-bar" id="bar-3"></div>
+                            <div class="strength-bar" id="bar-4"></div>
+                        </div>
+                        <span class="strength-text" id="strengthText">Use pelo menos 8 caracteres</span>
+                    </div>
+
+                    <button type="submit" class="btn-submit animate-in delay-5">Criar conta gratuita</button>
+
+                    <div class="divider animate-in delay-5">
+                        <span>ou registre-se com</span>
+                    </div>
+
+                    <button type="button" class="btn-google animate-in delay-5" disabled>
+                        <img src="assets/icons/google-icon.svg" alt="Logo do Google" width="20" height="20">
+                        Continuar com Google
+                    </button>
+
+                    <div class="login-link animate-in delay-5">
+                        <p>Já tem uma conta? <a href="login.html">Faça login</a></p>
+                    </div>
+
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="js/modules/register-carousel.js"></script>
+    <script src="js/register.js"></script>
+</body>
+
+</html>
