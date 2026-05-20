@@ -67,4 +67,15 @@ if (passwordInput && strengthText) {
         strengthText.textContent = texts[displayIndex];
         strengthText.style.color = colors[displayIndex];
     });
+
+    // direciona a tela de confirmação *teste*
+
+    const registerForm = document.getElementById('registerForm');
+
+if (registerForm) {
+    registerForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        window.location.href = 'confirmation.html?type=success';
+    });
+}
 }

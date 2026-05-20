@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação - Travel Explorer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Space+Grotesk:wght@300..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div class="confirmation-layout" id="confirmationLayout">
+
+        <!-- Background image layer -->
+        <div class="confirmation-bg" id="confirmationBg">
+            <img src="assets/img/carousel/capri-italia.webp" alt="" class="confirmation-bg-img" id="confirmationBgImg" aria-hidden="true">
+            <div class="confirmation-bg-overlay" id="confirmationBgOverlay"></div>
+        </div>
+
+        <!-- Back to home button -->
+        <a href="index.html" class="btn-back-home confirmation-back">
+            <i class="fa-solid fa-arrow-left"></i> Início
+        </a>
+
+        <!-- Central card -->
+        <main class="confirmation-card" id="confirmationCard" role="main">
+
+            <div class="confirmation-icon-wrap animate-in delay-1" id="iconWrap">
+                <svg class="confirmation-icon-svg" id="iconSvg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <circle class="icon-circle" cx="32" cy="32" r="28" stroke-width="2.5"/>
+                    <path class="icon-path" id="iconPath" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+
+            <div class="confirmation-label animate-in delay-2" id="confirmationLabel"></div>
+
+            <h1 class="confirmation-headline animate-in delay-2" id="confirmationHeadline"></h1>
+
+            <p class="confirmation-body animate-in delay-3" id="confirmationBody"></p>
+
+            <div class="confirmation-divider animate-in delay-3" aria-hidden="true">
+                <span class="confirmation-divider-line"></span>
+                <i class="fa-solid fa-compass confirmation-divider-icon"></i>
+                <span class="confirmation-divider-line"></span>
+            </div>
+
+            <div class="confirmation-actions animate-in delay-4" id="confirmationActions"></div>
+
+            <p class="confirmation-sub animate-in delay-5" id="confirmationSub"></p>
+
+        </main>
+
+        <!-- Decorative footer brand -->
+        <div class="confirmation-brand animate-in delay-5" aria-hidden="true">
+            <img src="assets/logos/Text_Only/Footer_Mono/Fundo_Transparente/logo_Footer_Mono_Fundo_Transparente.webp"
+                alt="Travel Explorer" class="confirmation-brand-logo">
+        </div>
+
+    </div>
+
+    <script type="module" src="js/confirmation.js"></script>
+</body>
+
+</html>
