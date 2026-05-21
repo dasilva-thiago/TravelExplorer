@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Explorer</title>
+    <title>Explorar - Travel Explorer</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,10 +17,10 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.clouds.min.js"></script>
-
 </head>
 
 <body>
+
     <!-- Navigation Bar -->
     <nav>
         <div class="left-section">
@@ -30,6 +30,7 @@
             </a>
 
             <ul class="nav-links">
+                <li><a href="explorar.html">Explorar</a></li>
                 <li><a href="criar-roteiro.html">Criar Roteiro</a></li>
                 <li><a href="dashboard.html">Dashboard</a></li>
             </ul>
@@ -48,9 +49,9 @@
         </div>
     </nav>
 
+    <!-- Hero -->
     <section class="hero-banner">
         <div id="vanta-hero" class="vanta-hero"></div>
-
         <div class="hero-banner-content">
             <div class="hero-text-block">
                 <img src="assets/logos/Header_Site/Fundo_Transparente/logo_Header_Site_Fundo_Transparente.webp"
@@ -60,21 +61,197 @@
         </div>
     </section>
 
+    <!-- ============================================================
+         SEÇÃO 1: EXPLORE POR CATEGORIA
+         Cards horizontais inspirados no TripAdvisor — com identidade
+         visual do Travel Explorer: overlay dark-navy, badge dourado,
+         nome da categoria em branco e link animado em gold.
+    ============================================================= -->
     <section class="escolhas-section">
+        <div class="escolhas-container">
 
-        <h2>Os melhores de 2026 - Escolhidos por nós do Travel Explorer</h2>
+            <header class="escolhas-header">
+                <span class="escolhas-eyebrow">Escolhas da Comunidade · 2026</span>
+                <h2>Os melhores de 2026</h2>
+                <p>Selecionados por viajantes reais — destinos, hotéis, restaurantes e experiências que ficam na memória.</p>
+            </header>
 
-        </section>
+            <div class="escolhas-banners">
 
+                <!-- Card: Destinos -->
+                <!-- Substitua a imagem por uma foto de destino turístico icônico -->
+                <a href="#" class="escolha-card">
+                    <div class="escolha-img">
+                        <img src="assets/img/paris.webp" alt="Destinos incríveis ao redor do mundo" loading="lazy">
+                    </div>
+                    <div class="escolha-overlay"></div>
+                    <span class="escolha-badge">2026</span>
+                    <div class="escolha-info">
+                        <h3 class="escolha-nome">Destinos</h3>
+                        <span class="escolha-link">Ver os melhores <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- Card: Hotéis -->
+                <!-- Substitua por: foto de quarto de hotel de luxo ou piscina de resort -->
+                <a href="#" class="escolha-card">
+                    <div class="escolha-img">
+                        <img src="assets/img/santiago.webp" alt="Os melhores hotéis do mundo" loading="lazy">
+                    </div>
+                    <div class="escolha-overlay"></div>
+                    <span class="escolha-badge">2026</span>
+                    <div class="escolha-info">
+                        <h3 class="escolha-nome">Hotéis</h3>
+                        <span class="escolha-link">Ver os melhores <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- Card: Restaurantes -->
+                <a href="#" class="escolha-card">
+                    <div class="escolha-img">
+                        <img src="assets/img/carousel/restaurante-interior.webp" alt="Os melhores restaurantes do mundo" loading="lazy">
+                    </div>
+                    <div class="escolha-overlay"></div>
+                    <span class="escolha-badge">2026</span>
+                    <div class="escolha-info">
+                        <h3 class="escolha-nome">Restaurantes</h3>
+                        <span class="escolha-link">Ver os melhores <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- Card: Praias -->
+                <!-- Substitua por: foto de praia paradisíaca com água azul-turquesa -->
+                <a href="#" class="escolha-card">
+                    <div class="escolha-img">
+                        <img src="assets/img/carousel/capri-italia.webp" alt="As melhores praias do mundo" loading="lazy">
+                    </div>
+                    <div class="escolha-overlay"></div>
+                    <span class="escolha-badge">2026</span>
+                    <div class="escolha-info">
+                        <h3 class="escolha-nome">Praias</h3>
+                        <span class="escolha-link">Ver as melhores <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- Card: Atividades -->
+                <a href="#" class="escolha-card">
+                    <div class="escolha-img">
+                        <img src="assets/img/carousel/exploradores.webp" alt="Atividades e experiências imperdíveis" loading="lazy">
+                    </div>
+                    <div class="escolha-overlay"></div>
+                    <span class="escolha-badge">2026</span>
+                    <div class="escolha-info">
+                        <h3 class="escolha-nome">Atividades</h3>
+                        <span class="escolha-link">Ver as melhores <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         SEÇÃO 2: OS MELHORES DOS MELHORES
+         Grade de chips de categoria (thumbnails quadrados com label)
+         Horizontal scroll em mobile, grid 6 colunas em desktop.
+    ============================================================= -->
+    <section class="melhores-section">
+        <div class="melhores-container">
+
+            <header class="melhores-header">
+                <div class="melhores-header-text">
+                    <h2>Os melhores dos melhores: confira todas as categorias</h2>
+                    <p>Reconhecimentos anuais baseados em avaliações reais da comunidade Travel Explorer</p>
+                </div>
+                <a href="#" class="melhores-ver-tudo">
+                    Ver tudo <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </header>
+
+            <div class="categorias-grid">
+
+                <!-- Chip: Restaurantes -->
+                <a href="#" class="categoria-chip">
+                    <div class="chip-img">
+                        <img src="assets/img/carousel/restaurante.webp" alt="Restaurantes" loading="lazy">
+                    </div>
+                    <div class="chip-info">
+                        <span class="chip-label">Restaurantes</span>
+                        <span class="chip-count">5.4k lugares</span>
+                    </div>
+                </a>
+
+                <!-- Chip: Praias -->
+                <!-- Substitua por: foto de praia com areia e mar -->
+                <a href="#" class="categoria-chip">
+                    <div class="chip-img">
+                        <img src="assets/img/carousel/capri-italia.webp" alt="Praias" loading="lazy">
+                    </div>
+                    <div class="chip-info">
+                        <span class="chip-label">Praias</span>
+                        <span class="chip-count">920 praias</span>
+                    </div>
+                </a>
+
+                <!-- Chip: Atividades -->
+                <a href="#" class="categoria-chip">
+                    <div class="chip-img">
+                        <img src="assets/img/carousel/exploradores.webp" alt="Atividades" loading="lazy">
+                    </div>
+                    <div class="chip-info">
+                        <span class="chip-label">Atividades</span>
+                        <span class="chip-count">2.1k experiências</span>
+                    </div>
+                </a>
+
+                <!-- Chip: Destinos -->
+                <a href="#" class="categoria-chip">
+                    <div class="chip-img">
+                        <img src="assets/img/buenos-aires.webp" alt="Destinos" loading="lazy">
+                    </div>
+                    <div class="chip-info">
+                        <span class="chip-label">Destinos</span>
+                        <span class="chip-count">1.8k destinos</span>
+                    </div>
+                </a>
+
+                <!-- Chip: Hotéis -->
+                <!-- Substitua por: foto de hotel ou quarto de hotel -->
+                <a href="#" class="categoria-chip">
+                    <div class="chip-img">
+                        <img src="assets/img/lima.webp" alt="Hotéis" loading="lazy">
+                    </div>
+                    <div class="chip-info">
+                        <span class="chip-label">Hotéis</span>
+                        <span class="chip-count">3.2k opções</span>
+                    </div>
+                </a>
+
+                <!-- Chip: Roteiros -->
+                <a href="#" class="categoria-chip">
+                    <div class="chip-img">
+                        <img src="assets/img/carousel/roteiro.webp" alt="Roteiros" loading="lazy">
+                    </div>
+                    <div class="chip-info">
+                        <span class="chip-label">Roteiros</span>
+                        <span class="chip-count">680 roteiros</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="site-footer">
         <div class="footer-container">
 
             <div class="footer-links">
                 <h4>Navegação</h4>
                 <ul>
-                    <li><a href="#">Explorar Destinos</a></li>
-                    <li><a href="#">Criar Roteiro</a></li>
-                    <li><a href="#">Painel do Usuário</a></li>
+                    <li><a href="explorar.html">Explorar Destinos</a></li>
+                    <li><a href="criar-roteiro.html">Criar Roteiro</a></li>
+                    <li><a href="dashboard.html">Painel do Usuário</a></li>
                     <li><a href="#">Contato</a></li>
                 </ul>
             </div>
