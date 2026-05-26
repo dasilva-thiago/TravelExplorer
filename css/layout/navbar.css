@@ -166,8 +166,8 @@ nav.nav--search-active .nav-search {
         margin-top: 6px;
         padding-left: 10px;
     }
-    .nav-links {
-        display: none;
+    .nav-links {        
+        gap: 12px;
     }
     nav .right-section {
         gap: 10px;
