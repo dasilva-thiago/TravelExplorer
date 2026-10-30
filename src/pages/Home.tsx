@@ -1,0 +1,22 @@
+import { useState } from 'react'
+import { ArrowRight, ChevronLeft, ChevronRight, Search, Sparkles } from 'lucide-react'
+import { destinations } from '../data/content'
+import { DestinationCard } from '../components/Cards'
+import { SectionLink } from '../components/Layout'
+
+const slides = [
+  { tag: 'Roteiros', title: 'Monte roteiros de viagem', text: 'Seu itinerário otimizado começa com uma boa ideia.', image: '/assets/img/carousel/roteiro.webp' },
+  { tag: 'Restaurantes', title: 'Descubra onde comer', text: 'Sabores locais para transformar qualquer viagem.', image: '/assets/img/carousel/restaurante.webp' },
+  { tag: 'Experiências', title: 'Viva algo inesquecível', text: 'Atividades e atrações para todos os estilos.', image: '/assets/img/carousel/exploradores.webp' },
+]
+
+export function Home() {
+  const [active, setActive] = useState(0); const [query, setQuery] = useState('')
+  const current = slides[active]
+  return <>
+    <section className="hero-pattern relative overflow-hidden text-white"><div className="absolute inset-0 bg-ink/25"/><div className="container relative flex min-h-[390px] items-center py-16"><div className="max-w-2xl"><p className="mb-5 flex items-center gap-2 text-sm font-semibold uppercase tracking-[.24em] text-sky"><Sparkles size={17}/> O mundo espera por você</p><h1 className="font-display text-5xl leading-[1.05] md:text-7xl">Planeje. Descubra.<br/><em className="text-gold">Explore.</em></h1><p className="mt-6 max-w-lg text-lg text-white/85">Inspire-se, monte seu roteiro e encontre experiências que combinam com a sua próxima aventura.</p><div className="mt-8 flex flex-wrap gap-3"><a href="#roteiros" className="rounded-full bg-gold px-6 py-3 font-bold text-ink hover:bg-amber-300">Começar a explorar <ArrowRight className="ml-2 inline" size={17}/></a><SectionLink to="/explorar">Ver destinos</SectionLink></div></div></div></section>
+    <section className="relative z-10 -mt-10"><div className="container"><div className="rounded-3xl bg-white p-4 shadow-xl ring-1 ring-slate-200 md:p-6"><p className="mb-4 text-center font-display text-2xl text-ink md:text-3xl">Aonde você quer ir?</p><form className="flex flex-col gap-3 sm:flex-row" onSubmit={e => e.preventDefault()}><div className="flex flex-1 items-center gap-3 rounded-2xl bg-slate-100 px-5 py-4"><Search className="text-muted" size={20}/><input value={query} onChange={e => setQuery(e.target.value)} placeholder="Pesquise destinos, restaurantes ou experiências" className="w-full bg-transparent text-sm outline-none"/></div><button className="rounded-2xl bg-ink px-8 py-4 font-bold text-white hover:bg-slate-700">Buscar</button></form></div></div></section>
+    <section id="roteiros" className="container py-20"><div className="mb-8 flex items-end justify-between"><div><p className="mb-2 text-sm font-bold uppercase tracking-widest text-gold">Uma ideia para cada viagem</p><h2 className="font-display text-4xl text-ink">Planeje, viaje e descubra</h2></div><div className="hidden gap-2 sm:flex"><button aria-label="Anterior" onClick={() => setActive((active + slides.length - 1) % slides.length)} className="rounded-full border p-2 hover:bg-slate-100"><ChevronLeft size={18}/></button><button aria-label="Próximo" onClick={() => setActive((active + 1) % slides.length)} className="rounded-full border p-2 hover:bg-slate-100"><ChevronRight size={18}/></button></div></div><div className="grid overflow-hidden rounded-3xl bg-ink text-white md:grid-cols-2"><div className="flex flex-col justify-center p-8 md:p-12"><span className="mb-4 w-fit rounded-full bg-gold px-3 py-1 text-xs font-bold uppercase tracking-wider text-ink">{current.tag}</span><h3 className="font-display text-4xl">{current.title}</h3><p className="mt-4 max-w-sm text-sky">{current.text}</p><SectionLink>Conheça essa ideia</SectionLink></div><img src={current.image} alt={current.title} className="h-64 w-full object-cover md:h-full"/></div></section>
+    <section id="destinos" className="bg-white py-20"><div className="container"><div className="mb-10 flex flex-col justify-between gap-4 sm:flex-row sm:items-end"><div><p className="mb-2 text-sm font-bold uppercase tracking-widest text-gold">Inspiração para sair do mapa</p><h2 className="font-display text-4xl text-ink">Destinos em destaque</h2></div><SectionLink>Ver todos os destinos</SectionLink></div><div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">{destinations.map(item => <DestinationCard item={item} key={item.name}/>)}</div></div></section>
+  </>
+}

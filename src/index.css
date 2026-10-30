@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Space Grotesk', sans-serif;
+  --font-display: 'Playfair Display', serif;
+  --color-ink: #15354c;
+  --color-sky: #dcebf3;
+  --color-gold: #e8b428;
+  --color-muted: #637584;
+}
+
+:root { color: #15354c; background: #f8fbfc; font-family: 'Space Grotesk', sans-serif; font-synthesis: none; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+.page-shell { min-height: 100vh; background: linear-gradient(180deg, #f8fbfc 0%, #eef5f7 100%); }
+.container { width: min(1160px, calc(100% - 2rem)); margin-inline: auto; }
+.hero-pattern { background: radial-gradient(circle at 20% 25%, rgba(255,255,255,.35) 0 2px, transparent 3px), linear-gradient(135deg, #214d68, #5e93ad 58%, #f0be45); background-size: 34px 34px, auto; }

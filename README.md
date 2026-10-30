@@ -1,17 +1,28 @@
-# TravelExplorer
+# Travel Explorer
 
-<p align="center">
-  <img src="\assets\logos\Preview_Image\Fundo_Transparente\logo_Preview_Image_Fundo_Transparente.png" alt="Travel Explorer Logo">
-</p>
+Aplicação web de viagens migrada para uma arquitetura moderna com React, TypeScript, Vite e Tailwind CSS.
 
-<p align="center">
-  <em>This project is in active development: features and structure may change.</em>
-</p>
+## Stack
 
-> The successor to **Buenos Aires Explorer**: evolving from a regional desktop app to a worldwide web platform with optimized routing and business integration.
+- React 18+ com componentes funcionais e React Router
+- TypeScript em modo strict
+- Vite para desenvolvimento e build
+- Tailwind CSS via plugin oficial do Vite
+- Lucide React para ícones
 
----
+## Desenvolvimento
 
-<p align="center">
-  Made by Thiago da Silva • Pindamonhangaba, SP, Brazil
-</p>
+```bash
+npm install
+npm run dev
+```
+
+## Validação e produção
+
+```bash
+npm run typecheck
+npm run build
+npm run preview
+```
+
+As rotas principais são `/`, `/explorar`, `/login`, `/registrar` e `/confirmacao?type=success`. Os assets legados foram preservados em `public/assets` e a interface foi reorganizada em `src/components`, `src/pages` e `src/data`.
